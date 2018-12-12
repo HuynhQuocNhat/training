@@ -1,0 +1,32 @@
+﻿CÀI ĐẶT LINUX
+Download và cài:
+	Vmware Workstation 12.x.x (64bit)
+	Ubuntu 16.0.4: server và desktop
+
+-Cấu hình địa chỉ IP-Ubuntu
+
+Trong Vmware Workstation: Edit --> Virtual Network Editor... --> Change Settings 
+	Chọn Vmnet1(nếu chưa có chọn Add Network...)
+		+Subnet IP: 10.10.10.0
+		+Subnet Mask: 255.255.255.0
+	Chọn Vmnet8(nếu chưa có chọn Add Network...)
+		+Subnet IP: 172.16.69.0
+		+Subnet Mask: 255.255.255.0
+		Chọn NAT Settings...: Gateway IP: 172.16.69.1
+Change adapter options
+	Vmnet1: Properties IP address: 10.10.10.10, đổi gateway như trên, đổi dns google
+
+Trong Vmware Workstation --> Edit virtual machine settings
+				Chỉnh lên 2 nhân
+				Remove Printer đi
+				Chọn Add... --> Network Adapter --> Next --> Custom:... Vmnet1(Host-only) -->Finish
+
+CÀI ĐẶT VÀ CẤU HÌNH SSH
+Chạy máy ảo server lên: login
+<---Slide CÀI ĐẶT VÀ CẤU HÌNH SSH--->
+Nếu lỗi chỗ câu lệnh #apt-get update --> https://askubuntu.com/questions/769925/ubuntu-16-04-sudo-apt-get-update-error
+<---Slide FIX LỖI KHÔNG UPDATE ĐƯỢC--->
+(Snapshot)
+#clear: xóa màn hình
+update done. xong nhập #apt-get dist-upgrade
+...
